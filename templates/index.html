@@ -22,6 +22,7 @@
         <table id="client-table" class="table table-striped">
             <thead class="thead-dark">
                 <tr>
+                    <th>#</th>
                     <th>Firstname</th>
                     <th>Lastname</th>
                     <th>Email</th>
@@ -36,6 +37,7 @@
             <tbody>
                 {% for result in results %}
                     <tr>
+                        <td>{{ loop.index }}</td>
                         <td>{{ result['firstname'] }}</td>
                         <td>{{ result['lastname'] }}</td>
                         <td>{{ result['email'] }}</td>
