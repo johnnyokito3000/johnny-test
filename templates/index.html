@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}List of Clients{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4 offset-4">
+                <h1 class="text-center">Clients</h1>
+            </div>
+            <div class="col-2">
+                <select name="country" id="country" class="form-control">
+                    <option value="all">All countries</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                </select>
+            </div>
+        </div>
+
+        
+        <table id="client-table" class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                    <th>Notes</th>
+                    <th>Country</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for result in results %}
+                    <tr>
+                        <td>{{ result['firstname'] }}</td>
+                        <td>{{ result['lastname'] }}</td>
+                        <td>{{ result['email'] }}</td>
+                        <td>{{ result['age'] }}</td>
+                        <td>{{ result['address'] }}</td>
+                        <td>{{ result['notes'] }}</td>
+                        <td>{{ result['country'] }}</td>
+                        <td>
+                            <a id="{{ result['id'] }}" class="btn btn-sm btn-warning btn-delete">Delete</a>
+                        </td>
+
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+        
+    </div>
+
+    <div class="text-center">        
+        <a class="btn btn-success mt-3" href="{{ url_for('add_new_client') }}">Add a new client</a>
+    </div>
+
+{% endblock %}
