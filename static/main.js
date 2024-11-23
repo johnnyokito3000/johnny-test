@@ -39,7 +39,7 @@ function rebuild_table(res) {
             var counter = i + 1;
             var client = res.data[i];
             content += '<tr>';
-            content += '<td><strong>' + counter + '</strong></td>';
+            content += '<td><strong>' + counter + '.</strong></td>';
             content += '<td>' + client.firstname + '</td>';
             content += '<td>' + client.lastname + '</td>';
             content += '<td>' + client.email + '</td>';
