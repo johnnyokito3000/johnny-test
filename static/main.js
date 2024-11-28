@@ -48,7 +48,7 @@ function rebuild_table(res) {
             content += '<td>' + client.notes + '</td>';
             content += '<td>' + client.country + '</td>';
             content += '<td>';
-            content += '<a id="' + client.id + '" class="btn btn-sm btn-warning btn-delete">Delete</a>';
+            content += '<a id="' + client.id + '" class="btn btn-sm btn-danger btn-delete">Delete</a>';
             content += '</td>';
             content += '</tr>';
         }

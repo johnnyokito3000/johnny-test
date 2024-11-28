@@ -7,7 +7,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-4 offset-4">
-                <h1 class="text-center">Clients Table</h1>
+                <h1 class="text-center">List of Clients</h1>
             </div>
             <div class="col-2">
                 <select name="country" id="country" class="form-control">
@@ -46,7 +46,7 @@
                         <td>{{ result['notes'] }}</td>
                         <td>{{ result['country'] }}</td>
                         <td>
-                            <a id="{{ result['id'] }}" class="btn btn-sm btn-warning btn-delete">Delete</a>
+                            <a id="{{ result['id'] }}" class="btn btn-sm btn-danger btn-delete">Delete</a>
                         </td>
 
                     </tr>
